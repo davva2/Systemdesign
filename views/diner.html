@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../data/menu.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script> docLoaded(indexPageLoaded);
+
+    </script>
+    <title>Wermlandskällar'n</title>
+    <header>
+        <h4 id="headlineID">Wermlandskällar'n ordering system</h4>
+    </header>
+    <meta charset="utf-8"/>
+</head>
+
+<body>
+<main id="mainID">
+    <section id="burger">
+            <table>
+                <thead>
+                <tr>
+                    <th> Burgare 1</th>
+                    <th> Burgare 2</th>
+                    <th> Burgare 3</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><button type="button" onclick="addToOrder('Burgare 1')">
+                        <img src="http://namorestaurang.se/wp-content/uploads/2014/03/Hamburgare.jpg"
+                             alt="150g Macho Nacho Deluxe" title="Burgare 1" align="center"></button>
+                    </td>
+                    <td><button type="button" onclick="addToOrder('Burgare 2')">
+                        <img src="http://www.drodd.com/images15/burger15.png"
+                             title="Burgare 2" align="center"></button>
+                    </td>
+                    <td><button type="button" onclick="addToOrder('Burgare 3')"><img
+                            src="http://www.dfordelhi.in/wp-content/uploads/2016/03/burger_sandwich_1.jpg"
+                            title="Burgare 3" align="center"></button>
+    </td>
+    </tbody>
+    </table>
+    </section>
+
+    <section id="drink">
+        <table>
+            <tr>
+                <td>
+                    <button class="text" onclick="addToOrder('Gränges 4,8%, 33cl')"> Gränges 4.8% - 33cl</button>
+                </td>
+                <td><button class="minus" onclick="removeFromOrder('Gränges 4,8%, 33cl')"> - </button></td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="text" onclick="addToOrder('Sleeping Bulldog IPA 5,0%, 50cl')"> Sleeping Bulldog IPA 5,0%, 50cl </button>
+                </td>
+                <td><button class="minus" onclick="removeFromOrder('Sleeping Bulldog IPA 5,0%, 50cl')"> - </button></td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="best">
+        <button type="button" id='btn' v-on:click="placeOrder()">Skicka</button>
+    </section>
+    <!--
+    <label for="halt">Staropramen</label>
+    <select id="halt">
+        <option>4.8%</option>
+        <option>5.2%</option>
+    </select>
+
+    <label for="alk">Alkohol/Alkfri</label>
+    <input type="radio" id="alk" value="alk" name="alktype" checked="checked" Alkohol>
+    <input type="radio" value="alkfri" name="alktype" Alkoholfri>
+    <form>
+        <p>
+        <center>
+            <label for="dricka">Beställ</label>
+            <select id="dricka">
+                <option>Gränges</option>
+                <option>Staropramen</option>
+                <option>Glögg</option>
+            </select><br>
+    </form>
+    <button type="button" id='btn' v-on:click="placeOrder()"><img
+            src="http://berndtholmstrom.fi/attastegtilldittvarumarke/bestall_knapp.png" width="100"></button>
+    </center>
+    </p>
+    -->
+    <div id="orders">
+        <h1>Väntande beställningar</h1>
+        <ol>
+            <li v-for="(item, key) in orders" v-if="!item.done">
+                {{ key }} : {{ item.orderItems.join(', ') }}
+            </li>
+        </ol>
+    </div>
+</main>
+<hr>
+<footer>
+    Copyright &copy;
+</footer>
+<script src="/vue/vue.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/nationPub.js"></script>
+<script src="js/diner.js"></script>
+</body>
+</html>
