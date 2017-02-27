@@ -58,7 +58,7 @@ function indexPageLoaded() {
     displayItems();
 }
 var totalCost = 0;
-function addToOrder(name, price) {
+function addToOrder(name, price, tosend) {
     if (document.getElementById('bestallningar') == null) {
         var table = document.createElement(table);
         table.setAttribute('id', 'bestallningar');
@@ -68,7 +68,7 @@ function addToOrder(name, price) {
         totalCost = 0;
         }
     var row = document.getElementById(name);
-    if (row == null) createRow(name);
+    if (row == null) createRow(name, tosend);
     else {
     document.getElementById(name + "amount").textContent++;
     }
@@ -76,7 +76,7 @@ function addToOrder(name, price) {
     console.log(totalCost);
 }
 
-function createRow(name) {
+function createRow(name, tosend) {
 
     var table = document.getElementById('bestallningar');
     var row = document.createElement("tr");
@@ -89,23 +89,35 @@ function createRow(name) {
     //var textName = document.createTextNode(name);
     var textAmount = document.createTextNode(amount);
     var textButton = document.createTextNode("-");
+    var textButton2 = document.createTextNode("+");
+    var textButton3 = document.createTextNode("edit");
     var textName = document.createElement("INPUT");
-
-    textName.setAttribute("name", "itemName");
+    if (tosend == 'yes'){
+	textName.setAttribute("name", "itemName");
+    }
     textName.setAttribute("value", name);
     textName.setAttribute("readonly", "");
+    
     var minusButton = document.createElement('button');
-
     minusButton.addEventListener("click", function(){
         removeFromOrder(name);
     });
-    //minusButton.setAttribute('height', '25%');
-    //minusButton.setAttribute('width', 'auto');
+
+    var plusButton = document.createElement('button');
+    plusButton.addEventListener("click", function(){
+        addToOrder(name); // Lägger inte till kostnad
+    });
+
+     var editButton = document.createElement('button');
 
     tdName.appendChild(textName);
     tdAmount.appendChild(textAmount);
     tdButton.appendChild(minusButton);
     minusButton.appendChild(textButton);
+    tdButton.appendChild(plusButton);
+    plusButton.appendChild(textButton2);
+    tdButton.appendChild(editButton);
+    editButton.appendChild(textButton3);
 
     table.appendChild(row);
     row.appendChild(tdName);

@@ -24,11 +24,11 @@
             <table>
                 <tbody>
                 <tr>
-                    <td><button class="text" type="button" onclick="addToOrder('Hamburgare', 65)">Hamburgare</button>
+                    <td><button class="text" type="button" onclick="addToOrder('Hamburgare', 65, 'yes')">Hamburgare</button>
                     </td>
-                    <td><button class="text" type="button" onclick="addToOrder('Ostburgare', 70)">Ostburgare</button>
+                    <td><button class="text" type="button" onclick="addToOrder('Ostburgare', 70, 'yes')">Ostburgare</button>
                     </td>
-                    <td><button class="text" type="button" onclick="addToOrder('Veganburgare', 65)">Veganburgare</button>
+                    <td><button class="text" type="button" onclick="addToOrder('Veganburgare', 65, 'yes')">Veganburgare</button>
     </td>
     </tbody>
     </table>
@@ -38,9 +38,24 @@
     <div id="best">
         <div id="rows"></div>
         <div id="skicka">
+	  <p>
+	    
+	  </p>
         <button type="button" id='btn' v-on:click="placeOrder()">Skicka</button>
         </div>
+	    <select id="bord">
+	      <option>Bord 1</option>
+	      <option>Bord 2</option>
+	      <option>Bord 3</option>
+	      <option>Bord 4</option>
+	      <option>Bord 5</option>
+	      <option>Bord 6</option>
+	      <option>Bord 7</option>
+	      <option>Bord 8</option>
+	      <option>Bord 9</option>
+	    </select>
             </td>
+	   
     </div>
 
         </tr>
@@ -50,24 +65,24 @@
         <table>
             <tr>
                 <td>
-                    <button class="text" onclick="addToOrder('Fullers India Pale Ale, 50cl', 65)">Fullers India Pale Ale, 50cl</button>
+                    <button class="text" onclick="addToOrder('Fullers India Pale Ale, 50cl', 65, 'no')">Fullers India Pale Ale, 50cl</button>
                 </td>
                 <td>
-                    <button class="text" onclick="addToOrder('Brew Dog 5 a.m, 33cl', 65)">Brew Dog 5 a.m, 33cl</button>
+                    <button class="text" onclick="addToOrder('Brew Dog 5 a.m, 33cl', 65, 'no')">Brew Dog 5 a.m, 33cl</button>
                 </td>
                 <td>
-                    <button class="text" onclick="addToOrder('Wisby Oak Porter, 33cl', 65)">Wisby Oak Porter, 33cl</button>
+                    <button class="text" onclick="addToOrder('Wisby Oak Porter, 33cl', 65, 'no')">Wisby Oak Porter, 33cl</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button class="text" onclick="addToOrder('Fullers ESB, 50cl', 65)">Fullers ESB, 50cl</button>
+                    <button class="text" onclick="addToOrder('Fullers ESB, 50cl', 65, 'no')">Fullers ESB, 50cl</button>
                 </td>
                 <td>
-                    <button class="text" onclick="addToOrder('Baron Trenck, 50cl', 65)">Baron Trenck, 50cl</button>
+                    <button class="text" onclick="addToOrder('Baron Trenck, 50cl', 65, 'no')">Baron Trenck, 50cl</button>
                 </td>
                 <td>
-                    <button class="text" onclick="addToOrder('Innis & Gunn Toasted Oak IPA, 33cl', 65)">Innis & Gunn Toasted Oak IPA, 33cl</button>
+                    <button class="text" onclick="addToOrder('Innis & Gunn Toasted Oak IPA, 33cl', 65, 'no')">Innis & Gunn Toasted Oak IPA, 33cl</button>
                 </td>
             </tr>
         </table>

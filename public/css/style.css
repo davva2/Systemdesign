@@ -42,8 +42,8 @@ button:hover {
     //display: inline-block;
     border: 1px dashed black;
     overflow: auto;
-    width: 20vw;
-    height: 33vh;
+    width: 28.9vw;
+    height: 29vh;
 }
 
 #orders {
@@ -55,10 +55,16 @@ button:hover {
 
 }
 
+#bord {
+    position: fixed;
+    right: 11vw;
+    bottom: 58.1vh;
+}
+
 #btn {
-    position: absolute;
-    right: 150px;
-    bottom: 60vh;
+    position: fixed;
+    right: 8vw;
+    bottom: 58vh;
 }
 
 .text {
