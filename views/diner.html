@@ -17,53 +17,62 @@
 
 <body>
 <main id="mainID">
-    <section id="burger">
+    <table id="tableID">
+        <tr id="tr1">
+            <td id="td1">
+    <div id="burger">
             <table>
-                <thead>
-                <tr>
-                    <th> Burgare 1</th>
-                    <th> Burgare 2</th>
-                    <th> Burgare 3</th>
-                </tr>
-                </thead>
                 <tbody>
                 <tr>
-                    <td><button type="button" onclick="addToOrder('Burgare 1')">
-                        <img src="http://namorestaurang.se/wp-content/uploads/2014/03/Hamburgare.jpg"
-                             alt="150g Macho Nacho Deluxe" title="Burgare 1" align="center"></button>
+                    <td><button class="text" type="button" onclick="addToOrder('Hamburgare', 65)">Hamburgare</button>
                     </td>
-                    <td><button type="button" onclick="addToOrder('Burgare 2')">
-                        <img src="http://www.drodd.com/images15/burger15.png"
-                             title="Burgare 2" align="center"></button>
+                    <td><button class="text" type="button" onclick="addToOrder('Ostburgare', 70)">Ostburgare</button>
                     </td>
-                    <td><button type="button" onclick="addToOrder('Burgare 3')"><img
-                            src="http://www.dfordelhi.in/wp-content/uploads/2016/03/burger_sandwich_1.jpg"
-                            title="Burgare 3" align="center"></button>
+                    <td><button class="text" type="button" onclick="addToOrder('Veganburgare', 65)">Veganburgare</button>
     </td>
     </tbody>
     </table>
-    </section>
+    </div>
+            </td>
+            <td rowspan="2">
+    <div id="best">
+        <div id="rows"></div>
+        <div id="skicka">
+        <button type="button" id='btn' v-on:click="placeOrder()">Skicka</button>
+        </div>
+            </td>
+    </div>
 
-    <section id="drink">
+        </tr>
+        <tr>
+            <td>
+    <div id="drink">
         <table>
             <tr>
                 <td>
-                    <button class="text" onclick="addToOrder('Gränges 4,8%, 33cl')"> Gränges 4.8% - 33cl</button>
+                    <button class="text" onclick="addToOrder('Fullers India Pale Ale, 50cl', 65)">Fullers India Pale Ale, 50cl</button>
                 </td>
-                <td><button class="minus" onclick="removeFromOrder('Gränges 4,8%, 33cl')"> - </button></td>
+                <td>
+                    <button class="text" onclick="addToOrder('Brew Dog 5 a.m, 33cl', 65)">Brew Dog 5 a.m, 33cl</button>
+                </td>
+                <td>
+                    <button class="text" onclick="addToOrder('Wisby Oak Porter, 33cl', 65)">Wisby Oak Porter, 33cl</button>
+                </td>
             </tr>
             <tr>
                 <td>
-                    <button class="text" onclick="addToOrder('Sleeping Bulldog IPA 5,0%, 50cl')"> Sleeping Bulldog IPA 5,0%, 50cl </button>
+                    <button class="text" onclick="addToOrder('Fullers ESB, 50cl', 65)">Fullers ESB, 50cl</button>
                 </td>
-                <td><button class="minus" onclick="removeFromOrder('Sleeping Bulldog IPA 5,0%, 50cl')"> - </button></td>
+                <td>
+                    <button class="text" onclick="addToOrder('Baron Trenck, 50cl', 65)">Baron Trenck, 50cl</button>
+                </td>
+                <td>
+                    <button class="text" onclick="addToOrder('Innis & Gunn Toasted Oak IPA, 33cl', 65)">Innis & Gunn Toasted Oak IPA, 33cl</button>
+                </td>
             </tr>
         </table>
-    </section>
-
-    <section id="best">
-        <button type="button" id='btn' v-on:click="placeOrder()">Skicka</button>
-    </section>
+    </div>
+            </td>
     <!--
     <label for="halt">Staropramen</label>
     <select id="halt">
@@ -89,16 +98,26 @@
     </center>
     </p>
     -->
+        </tr>
+        <tr>
+            <td>
     <div id="orders">
-        <h1>Väntande beställningar</h1>
+        <h5>Väntande beställningar</h5>
         <ol>
             <li v-for="(item, key) in orders" v-if="!item.done">
                 {{ key }} : {{ item.orderItems.join(', ') }}
             </li>
         </ol>
     </div>
+            </td>
+        </tr>
+    </table>
 </main>
-<hr>
+<div id="test1"></div>
+<div id="test2"></div>
+<div id="test3"></div>
+<div id="test4"></div>
+<div id="test5"></div>
 <footer>
     Copyright &copy;
 </footer>

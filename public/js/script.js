@@ -57,20 +57,23 @@ for (i = 0; i < order.length; i++) {
 function indexPageLoaded() {
     displayItems();
 }
-
-function addToOrder(name) {
+var totalCost = 0;
+function addToOrder(name, price) {
     if (document.getElementById('bestallningar') == null) {
         var table = document.createElement(table);
         table.setAttribute('id', 'bestallningar');
         var btn = document.getElementById('btn');
-        var section = document.getElementById('best');
-        section.insertBefore(table, btn);
+        var section = document.getElementById('rows');
+        section.appendChild(table);
+        totalCost = 0;
         }
     var row = document.getElementById(name);
     if (row == null) createRow(name);
     else {
     document.getElementById(name + "amount").textContent++;
     }
+    totalCost += price;
+    console.log(totalCost);
 }
 
 function createRow(name) {

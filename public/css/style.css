@@ -1,31 +1,20 @@
+/*
 #burger table {
-    width: 100%;
+    width: 100vw;
     height: auto;
 }
 
-#burger table img {
-    width: 190px;
-    height: 140px;
-}
-
-img[title="Il Diablo"] {
-    width: 190px;
-    height: 145px;
-}
-
 #burger td {
+    text-align: center;
+}*/
+
+header {
     text-align: center;
 }
 
 body {
     font-family: arial;
     font-size: 3vh;
-}
-
-table button[align="center"] {
-    background: white;
-    width: 200px;
-    height: 150px;
 }
 
 button:hover {
@@ -36,38 +25,52 @@ button:hover {
     color: black;
     background-color: white;
     border: 1px dashed black;
-}
+    width: 70vw;
+    //display: inline-block;
 
-header {
-    text-align: center;
-}
-
-#orders {
-
-}
-
-#best {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-
-#btn {
-    position: relative;
-    left: 0px;
-    bottom: 0px;
 }
 
 #drink {
     padding-top: 5px;
+    width: 70vw;
+    border: 1px dashed black;
+    //display: inline-block;
+    border: 1px dashed black;
+}
+
+#best {
+    //display: inline-block;
+    border: 1px dashed black;
+    overflow: auto;
+    width: 20vw;
+    height: 33vh;
+}
+
+#orders {
+    text-align: center;
+}
+
+//Själva tablet för beställningen
+#bestallningar {
+
+}
+
+#btn {
+    position: absolute;
+    right: 150px;
+    bottom: 60vh;
 }
 
 .text {
-    width: 300px;
-    height: 50px;
+    width: 23vw;
+    height: 5vw;
 }
 
 .minus {
     height: 50px;
     width: 40px;
+}
+
+#td1 {
+    vertical-align: top;
 }

@@ -25,7 +25,7 @@ new Vue({
       return document.getElementById(i.value + "amount").textContent + ' st ' + i.value;
     });
       if (orderItems.length != 0) socket.emit('order', {orderId: getOrderNumber(), orderItems: orderItems});
-      document.getElementById('best').removeChild(document.getElementById('bestallningar'));
+      document.getElementById('rows').removeChild(document.getElementById('bestallningar'));
   }
   }
 });
