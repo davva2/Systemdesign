@@ -26,24 +26,39 @@ button:hover {
     background-color: white;
     border: 1px dashed black;
     width: 70vw;
-    //display: inline-block;
-
 }
 
 #drink {
     padding-top: 5px;
     width: 70vw;
     border: 1px dashed black;
-    //display: inline-block;
-    border: 1px dashed black;
 }
 
 #best {
-    //display: inline-block;
     border: 1px dashed black;
-    overflow: auto;
+    vertical-align: top;
     width: 28.9vw;
     height: 29vh;
+}
+
+#skicka {
+
+}
+
+#kalle {
+    //table-layout:fixed;
+}
+
+#rows {
+    width: 28.9vw;
+    height: 23vh;
+    overflow: auto;
+}
+
+#skicka {
+    text-align: center;
+    width: auto;
+    height: 6vh;
 }
 
 #orders {
@@ -57,14 +72,14 @@ button:hover {
 
 #bord {
     position: fixed;
-    right: 11vw;
-    bottom: 58.1vh;
+    right: 13vw;
+    bottom: 56.1vh;
 }
 
 #btn {
     position: fixed;
     right: 8vw;
-    bottom: 58vh;
+    bottom: 56vh;
 }
 
 .text {
@@ -78,5 +93,9 @@ button:hover {
 }
 
 #td1 {
-    vertical-align: top;
+
+}
+
+#tdbest {
+
 }

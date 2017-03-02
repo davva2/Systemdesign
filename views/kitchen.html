@@ -4,10 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nationsköket</title>
-  <link rel="stylesheet" href="css/nationPub.css">
+  <link rel="stylesheet" href="../css/nationPub.css">
 </head>
 <body>
   <div id="orders">
+    <h1>Väntande beställningar</h1>
+    <button :id="key" class="pending" v-for="(item, key) in orders" v-if="!item.done" v-on:click="markDone(key)">
+      {{ key }} : {{ item.orderItems.join(', ') }}
+    </button>
+    <!--
     <h1>Väntande beställningar</h1>
     <ol>
       <li v-for="(item, key) in orders" v-if="!item.done"> 
@@ -17,6 +22,7 @@
         </button>
       </li>
     </ol>
+    -->
         <h1>Färdiga beställningar</h1>
     <ol>
       <li v-for="(item, key) in orders" v-if="item.done"> 

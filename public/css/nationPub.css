@@ -1,0 +1,8 @@
+button {
+    display: block;
+    width: 70vw;
+    height: 10vh;
+    margin: 10px;
+    background-color: red;
+    font-size: 3vh;
+}

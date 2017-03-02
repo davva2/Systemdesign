@@ -31,32 +31,39 @@
                     <td><button class="text" type="button" onclick="addToOrder('Veganburgare', 65, 'yes')">Veganburgare</button>
     </td>
     </tbody>
-    </table>
+            </table>
     </div>
             </td>
-            <td rowspan="2">
-    <div id="best">
-        <div id="rows"></div>
-        <div id="skicka">
-	  <p>
-	    
-	  </p>
-        <button type="button" id='btn' v-on:click="placeOrder()">Skicka</button>
-        </div>
-	    <select id="bord">
-	      <option>Bord 1</option>
-	      <option>Bord 2</option>
-	      <option>Bord 3</option>
-	      <option>Bord 4</option>
-	      <option>Bord 5</option>
-	      <option>Bord 6</option>
-	      <option>Bord 7</option>
-	      <option>Bord 8</option>
-	      <option>Bord 9</option>
-	    </select>
+            <td rowspan="2" id="tdbest">
+                <div id="best">
+                    <table id="kalle">
+                        <tr id="trrows">
+                            <td id="tdrows">
+                                <div id="rows"></div>
+                            </td>
+
+                        </tr>
+                        <tr id="trskicka">
+                            <td>
+                                <div id="skicka">
+                                    <button type="button" id='btn' v-on:click="placeOrder()">Skicka</button>
+                                <select id="bord">
+                                    <option>Bord 1</option>
+                                    <option>Bord 2</option>
+                                    <option>Bord 3</option>
+                                    <option>Bord 4</option>
+                                    <option>Bord 5</option>
+                                    <option>Bord 6</option>
+                                    <option>Bord 7</option>
+                                    <option>Bord 8</option>
+                                    <option>Bord 9</option>
+                                </select>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </td>
-	   
-    </div>
 
         </tr>
         <tr>
