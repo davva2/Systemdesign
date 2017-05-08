@@ -23,6 +23,7 @@ new Vue({
       // create an array of checked items to order
       var e = document.getElementById("bord");
       var bord = e.options[e.selectedIndex].text;
+      if (bord == 'Välj ett bord') return 0;
     var orderItems = [].filter.call(document.getElementsByName('itemName'), function(i) {
       return i;
     }).map(function(i) {

@@ -21,29 +21,40 @@ button:hover {
     cursor: pointer;
 }
 
+.page {
+    margin-bottom: 20px;
+     border: 2px dotted black;
+}
+
 #burger {
     color: black;
     background-color: white;
-    border: 1px dashed black;
+
     width: 70vw;
+
 }
 
 #drink {
     padding-top: 5px;
     width: 70vw;
-    border: 1px dashed black;
+    display: none;
 }
+
+#side {
+    display: none;
+}
+
 
 #best {
-    border: 1px dashed black;
+    border: 2px dotted black;
     vertical-align: top;
-    width: 28.9vw;
-    height: 29vh;
+    width: 27vw;
+    height: 40vh;
+    position: fixed;
+    right: 0.5vw;
+    top: 16vh;
 }
 
-#skicka {
-
-}
 
 #kalle {
     //table-layout:fixed;
@@ -51,7 +62,7 @@ button:hover {
 
 #rows {
     width: 28.9vw;
-    height: 23vh;
+    height: 32vh;
     overflow: auto;
 }
 
@@ -66,25 +77,31 @@ button:hover {
 }
 
 //Själva tablet för beställningen
-#bestallningar {
-
+.line button {
+    width: 100px;
+    height: auto;
+    background-color: red;
 }
 
 #bord {
     position: fixed;
-    right: 13vw;
-    bottom: 56.1vh;
+    right: 16vw;
+    bottom: 45vh;
+    height: 40px;
+
 }
 
 #btn {
     position: fixed;
-    right: 8vw;
-    bottom: 56vh;
+    right: 6vw;
+    bottom: 45vh;
+    width: 100px;
+    height: 40px;
 }
 
 .text {
-    width: 23vw;
-    height: 5vw;
+    width: 17.25vw;
+    height: 4vw;
 }
 
 .minus {
@@ -98,4 +115,10 @@ button:hover {
 
 #tdbest {
 
+}
+
+.top {
+    width: 120px;
+    height: 30px;
+    margin-bottom: 5px;
 }

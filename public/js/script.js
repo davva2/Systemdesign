@@ -105,7 +105,7 @@ function createRow(name, tosend) {
 
     var plusButton = document.createElement('button');
     plusButton.addEventListener("click", function(){
-        addToOrder(name); // Lägger inte till kostnad
+        addToOrder(name); // Lï¿½gger inte till kostnad
     });
 
      var editButton = document.createElement('button');
@@ -124,6 +124,7 @@ function createRow(name, tosend) {
     row.appendChild(tdAmount);
     row.appendChild(tdButton);
     row.setAttribute('id', name);
+    row.setAttribute('class', 'line');
 }
 
 function deleteRow(name) {
@@ -137,5 +138,27 @@ function removeFromOrder(name) {
     if (document.getElementById(name + "amount").textContent == "1") deleteRow(name);
     else {
     document.getElementById(name + "amount").textContent--;
+    }
+}
+
+function goToPage(id) {
+/*
+    var x = document.getElementById(id);
+    console.log(x.style.display);
+    if (x.style.display == "none") {
+    x.style.display = "block";
+    } else {
+    x.style.display = "none";
+    }
+*/
+    var udiv = document.getElementsByClassName('page');
+        for (var i = 0; i < udiv.length; ++i) {
+            var it = udiv[i];
+            it.style.display = 'none';
+    }
+    var idiv = document.getElementsByClassName(id);
+    for (var i = 0; i < idiv.length; ++i) {
+        var item = idiv[i];
+        item.style.display = 'block';
     }
 }

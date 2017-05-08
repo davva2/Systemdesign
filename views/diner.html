@@ -16,12 +16,20 @@
 </head>
 
 <body>
+
+<button class="top" type="button" onclick="goToPage('usual')">Vanligaste</button>
+<button class="top" type="button" onclick="goToPage('drink')">Dricka</button>
+<button class="top" type="button" onclick="goToPage('burger')">Hamburgare</button>
+<button class="top" type="button" onclick="goToPage('side')">Snacks</button>
+
+
 <main id="mainID">
     <table id="tableID">
         <tr id="tr1">
             <td id="td1">
-    <div id="burger">
+    <div id="burger" class="usual burger page">
             <table>
+
                 <tbody>
                 <tr>
                     <td><button class="text" type="button" onclick="addToOrder('Hamburgare', 65, 'yes')">Hamburgare</button>
@@ -29,46 +37,20 @@
                     <td><button class="text" type="button" onclick="addToOrder('Ostburgare', 70, 'yes')">Ostburgare</button>
                     </td>
                     <td><button class="text" type="button" onclick="addToOrder('Veganburgare', 65, 'yes')">Veganburgare</button>
+
     </td>
     </tbody>
             </table>
     </div>
             </td>
             <td rowspan="2" id="tdbest">
-                <div id="best">
-                    <table id="kalle">
-                        <tr id="trrows">
-                            <td id="tdrows">
-                                <div id="rows"></div>
-                            </td>
 
-                        </tr>
-                        <tr id="trskicka">
-                            <td>
-                                <div id="skicka">
-                                    <button type="button" id='btn' v-on:click="placeOrder()">Skicka</button>
-                                <select id="bord">
-                                    <option>Bord 1</option>
-                                    <option>Bord 2</option>
-                                    <option>Bord 3</option>
-                                    <option>Bord 4</option>
-                                    <option>Bord 5</option>
-                                    <option>Bord 6</option>
-                                    <option>Bord 7</option>
-                                    <option>Bord 8</option>
-                                    <option>Bord 9</option>
-                                </select>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
             </td>
 
         </tr>
         <tr>
             <td>
-    <div id="drink">
+    <div id="drink" class="drink page">
         <table>
             <tr>
                 <td>
@@ -80,21 +62,140 @@
                 <td>
                     <button class="text" onclick="addToOrder('Wisby Oak Porter, 33cl', 65, 'no')">Wisby Oak Porter, 33cl</button>
                 </td>
-            </tr>
-            <tr>
                 <td>
                     <button class="text" onclick="addToOrder('Fullers ESB, 50cl', 65, 'no')">Fullers ESB, 50cl</button>
                 </td>
+            </tr>
+            <tr>
                 <td>
                     <button class="text" onclick="addToOrder('Baron Trenck, 50cl', 65, 'no')">Baron Trenck, 50cl</button>
                 </td>
                 <td>
                     <button class="text" onclick="addToOrder('Innis & Gunn Toasted Oak IPA, 33cl', 65, 'no')">Innis & Gunn Toasted Oak IPA, 33cl</button>
                 </td>
+                <td>
+                    <button class="text" onclick="addToOrder('Duvel, 33cl', 65, 'no')">Duvel, 33cl</button>
+                </td>
+                <td>
+                    <button class="text" onclick="addToOrder('Wisby Klosteröl, 33cl', 65, 'no')">Wisby Klosteröl, 33cl</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="text" onclick="addToOrder('Adnams Bitter, 50cl', 65, 'no')">Adnams Bitter, 50cl</button>
+                </td>
+                <td>
+                    <button class="text" onclick="addToOrder('Innis & Gunn Original, 33cl', 65, 'no')">Innis & Gunn Original, 33cl</button>
+                </td>
+                <td>
+                    <button class="text" onclick="addToOrder('Innis & Gunn Toasted Oak IPA, 33cl', 65, 'no')">Innis & Gunn Toasted Oak IPA, 33cl</button>
+                </td>
+                <td>
+                    <button class="text" onclick="addToOrder('Liberty Ale, 33cl', 65, 'no')">Liberty Ale, 33cl</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="text" onclick="addToOrder('Anchor Steam, 33cl', 65, 'no')">Anchor Steam, 33cl</button>
+                </td>
+                <td>
+                    <button class="text" onclick="addToOrder('Nanny State, 33cl', 65, 'no')">Nanny State, 33cl</button>
+                </td>
+                <td>
+                    <button class="text" onclick="addToOrder('Störtebeker, 33cl', 65, 'no')">Störtebeker, 33cl</button>
+                </td>
+                <td>
+                    <button class="text" onclick="addToOrder('Zatec, 33cl', 65, 'no')">Zatec, 33cl</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="text" onclick="addToOrder('Greens Blond Ale, 33cl', 65, 'no')">Greens Blond Ale, 33cl</button>
+                </td>
             </tr>
         </table>
     </div>
+                <div id="usualside" class="usual page">
+                    <table>
+                        <tr>
+                            <td>
+                                <button class="text" onclick="addToOrder('Strips', 20, 'yes')">Strips</button>
+                            </td>
+                            <td>
+                                <button class="text" onclick="addToOrder('Nachos', 30, 'yes')">Nachos</button>
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="side" class="side page">
+                    <table>
+                        <tr>
+                            <td>
+                                <button class="text" onclick="addToOrder('Strips', 20, 'yes')">Strips</button>
+                            </td>
+                            <td>
+                                <button class="text" onclick="addToOrder('Nachos', 30, 'yes')">Nachos</button>
+                            </td>
+                            <td>
+                                <button class="text" onclick="addToOrder('Popcorn', 30, 'yes')">Popcorn</button>
+                            </td>
+                            <td>
+                                <button class="text" onclick="addToOrder('Chips', 30, 'yes')">Chips</button>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div id="usualdrink" class="usual page">
+                    <table>
+                        <tr>
+                            <td>
+                                <button class="text" onclick="addToOrder('Fullers India Pale Ale, 50cl', 65, 'no')">Fullers India Pale Ale, 50cl</button>
+                            </td>
+                            <td>
+                                <button class="text" onclick="addToOrder('Brew Dog 5 a.m, 33cl', 65, 'no')">Brew Dog 5 a.m, 33cl</button>
+                            </td>
+                            <td>
+                                <button class="text" onclick="addToOrder('Wisby Oak Porter, 33cl', 65, 'no')">Wisby Oak Porter, 33cl</button>
+                            </td>
+                            <td>
+                                <button class="text" onclick="addToOrder('Duvel, 33cl', 65, 'no')">Duvel, 33cl</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="text" onclick="addToOrder('Wisby Klosteröl, 33cl', 65, 'no')">Wisby Klosteröl, 33cl</button>
+                            </td>
+                            <td>
+                                <button class="text" onclick="addToOrder('Adnams Bitter, 50cl', 65, 'no')">Adnams Bitter, 50cl</button>
+                            </td>
+                            <td>
+                                <button class="text" onclick="addToOrder('Innis & Gunn Original, 33cl', 65, 'no')">Innis & Gunn Original, 33cl</button>
+                            </td>
+                            <td>
+                                <button class="text" onclick="addToOrder('Innis & Gunn Toasted Oak IPA, 33cl', 65, 'no')">Innis & Gunn Toasted Oak IPA, 33cl</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="text" onclick="addToOrder('Liberty Ale, 33cl', 65, 'no')">Liberty Ale, 33cl</button>
+                            </td>
+                            <td>
+                                <button class="text" onclick="addToOrder('Anchor Steam, 33cl', 65, 'no')">Anchor Steam, 33cl</button>
+                            </td>
+                            <td>
+                                <button class="text" onclick="addToOrder('Nanny State, 33cl', 65, 'no')">Nanny State, 33cl</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </td>
+
     <!--
     <label for="halt">Staropramen</label>
     <select id="halt">
@@ -134,6 +235,38 @@
             </td>
         </tr>
     </table>
+
+    <div id="best">
+        <table id="kalle">
+            <tr id="trrows">
+                <td id="tdrows">
+                    <div id="rows"></div>
+                </td>
+
+            </tr>
+            <tr id="trskicka">
+                <td>
+                    <div id="skicka">
+                        <button type="button" id='btn' v-on:click="placeOrder()">Skicka</button>
+                        <form>
+                        <select required id="bord">
+                            <option value="" disabled selected>Välj ett bord</option>
+                            <option>Bord 1</option>
+                            <option>Bord 2</option>
+                            <option>Bord 3</option>
+                            <option>Bord 4</option>
+                            <option>Bord 5</option>
+                            <option>Bord 6</option>
+                            <option>Bord 7</option>
+                            <option>Bord 8</option>
+                            <option>Bord 9</option>
+                        </select>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
 </main>
 <div id="test1"></div>
 <div id="test2"></div>
